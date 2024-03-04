@@ -42,7 +42,6 @@ class MemberRepositoryTest {
         memberRepository.save(member1);
         memberRepository.save(member2);
         memberRepository.save(member3);
-
         //when
         List<Member> result = memberRepository.findAll();
 
