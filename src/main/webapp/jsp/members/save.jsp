@@ -7,7 +7,8 @@
  System.out.println("save.jsp");
  String username = request.getParameter("username");
  int age = Integer.parseInt(request.getParameter("age"));
- Member member = new Member(username, age);
+ Member member =
+ new Member(username, age);
  System.out.println("member = " + member);
  memberRepository.save(member);
 %>
