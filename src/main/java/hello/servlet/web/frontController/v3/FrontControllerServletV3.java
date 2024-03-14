@@ -1,6 +1,6 @@
 package hello.servlet.web.frontController.v3;
 
-import hello.servlet.web.frontController.ModelView;
+import hello.servlet.web.frontController.ModelAndView;
 import hello.servlet.web.frontController.MyView;
 import hello.servlet.web.frontController.v3.controller.MemberFormControllerV3;
 import hello.servlet.web.frontController.v3.controller.MemberListControllerV3;
@@ -41,7 +41,7 @@ public class FrontControllerServletV3 extends HttpServlet {
         }
 
         Map<String, String> paramMap = createParamMap(request);
-        ModelView mv = controller.process(paramMap);
+        ModelAndView mv = controller.process(paramMap);
 
         MyView view = viewResolver(mv.getViewName());
         view.render(mv.getModel(), request, response);
